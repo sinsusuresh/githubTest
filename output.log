@@ -1,0 +1,172 @@
+YOLOv5 temporarily requires wandb version 0.12.10 or below. Some features may not work as expected.
+Downloading https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5s.pt to yolov5s.pt...
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████| 14.1M/14.1M [00:12<00:00, 1.18MB/s]
+                 from  n    params  module                                  arguments
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]
+ 24      [17, 20, 23]  1     16182  models.yolo.Detect                      [1, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+YOLOv5s_custom summary: 270 layers, 7022326 parameters, 7022326 gradients
+Transferred 342/349 items from yolov5s.pt
+Scaled weight_decay = 0.0005
+[34m[1moptimizer:[39m[22m SGD with parameter groups 57 weight (no decay), 60 weight, 60 bias
+[34m[1mtrain: [39m[22mScanning 'E:\Projects\yolov5\dataset\labels' images and labels...74 found, 17 missing, 0 empty, 0 corrupt: 100%|
+[34m[1mtrain: [39m[22mNew cache created: E:\Projects\yolov5\dataset\labels.cache
+[34m[1mtrain: [39m[22mCaching images (0.0GB ram): 100%|██████████| 91/91 [00:00<00:00, 700.00it/s]
+[34m[1mval: [39m[22mScanning 'E:\Projects\yolov5\dataset\labels.cache' images and labels... 74 found, 17 missing, 0 empty, 0 corrupt:
+[34m[1mval: [39m[22mCaching images (0.0GB ram): 100%|██████████| 91/91 [00:00<00:00, 509.73it/s]
+Plotting labels to runs\train\yolov5s_results7\labels.jpg...
+[34m[1mAutoAnchor: [39m[22m5.65 anchors/target, 1.000 Best Possible Recall (BPR). Current anchors are a good fit to dataset
+Image sizes 416 train, 416 val
+Using 8 dataloader workers
+Logging results to [1mruns\train\yolov5s_results7
+Starting training for 10 epochs...
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+
+       0/9        0G    0.1204   0.02341         0        39       416: 100%|██████████| 6/6 [00:20<00:00,  3.38s/it]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  33%|███▎      | 1/3 [00:03<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:09<00:
+                 all         91         69   0.000845      0.029    0.00038   5.29e-05
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+       1/9        0G    0.1172   0.02409         0        40       416: 100%|██████████| 6/6 [00:17<00:00,  2.99s/it]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  33%|███▎      | 1/3 [00:03<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:07<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:10<00:
+                 all         91         69    0.00338     0.0145   0.000941   0.000192
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+       2/9        0G    0.1091   0.02459         0        27       416: 100%|██████████| 6/6 [00:17<00:00,  3.00s/it]
+
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  33%|███▎      | 1/3 [00:03<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:09<00:
+                 all         91         74    0.00282     0.0135    0.00123   0.000332
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+       3/9        0G    0.1062    0.0287         0        45       416: 100%|██████████| 6/6 [00:17<00:00,  2.94s/it]
+
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  33%|███▎      | 1/3 [00:03<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:09<00:
+                 all         91         76    0.00298      0.105    0.00172   0.000367
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+       4/9        0G    0.1007   0.02722         0        34       416: 100%|██████████| 6/6 [00:17<00:00,  2.94s/it]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  33%|███▎      | 1/3 [00:03<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:07<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:09<00:
+                 all         91         77    0.00554     0.0779    0.00286   0.000594
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+       5/9        0G   0.09819   0.02954         0        42       416: 100%|██████████| 6/6 [00:17<00:00,  2.97s/it]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  33%|███▎      | 1/3 [00:03<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:10<00:
+                 all         91         77     0.0105     0.0779    0.00411    0.00105
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+       6/9        0G   0.09359   0.03374         0        37       416: 100%|██████████| 6/6 [00:17<00:00,  2.95s/it]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:09<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:09<00:WARNING: NMS time limit 0.910s exceeded
+                 all         91         89     0.0197       0.18    0.00757    0.00144
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+       7/9        0G   0.09493   0.03204         0        60       416:  17%|█▋        | 1/6 [00:03<00:15,  3.16s/it]
+       7/9        0G    0.0921    0.0316         0        52       416:  33%|███▎      | 2/6 [00:06<00:12,  3.11s/it]
+       7/9        0G   0.09196   0.03209         0        57       416:  50%|█████     | 3/6 [00:09<00:09,  3.14s/it]
+       7/9        0G   0.09117   0.03088         0        49       416:  67%|██████▋   | 4/6 [00:12<00:06,  3.12s/it]
+       7/9        0G   0.09227   0.03217         0        76       416:  83%|████████▎ | 5/6 [00:15<00:03,  3.11s/it]
+       7/9        0G   0.09151   0.03043         0        25       416: 100%|██████████| 6/6 [00:17<00:00,  2.96s/it]
+       7/9        0G   0.09151   0.03043         0        25       416: 100%|██████████| 6/6 [00:17<00:00,  2.96s/it]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  67%|██████▋   | 2/3 [00:06<00:WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 0.910s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+     Epoch   gpu_mem       box       obj       cls    labels  img_sizeAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:10<00:WARNING: NMS time limit 1.060s exceeded
+     Epoch   gpu_mem       box       obj       cls    labels  img_sizeAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:10<00:WARNING: NMS time limit 1.060s exceeded
+     Epoch   gpu_mem       box       obj       cls    labels  img_sizeAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:10<00:WARNING: NMS time limit 1.060s exceeded
+     Epoch   gpu_mem       box       obj       cls    labels  img_sizeAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:10<00:WARNING: NMS time limit 1.060s exceeded
+     Epoch   gpu_mem       box       obj       cls    labels  img_sizeAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:10<00:WARNING: NMS time limit 1.060s exceeded
+     Epoch   gpu_mem       box       obj       cls    labels  img_sizeAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:10<00:WARNING: NMS time limit 1.060s exceeded
+     Epoch   gpu_mem       box       obj       cls    labels  img_sizeAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:10<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  33%|███▎      | 1/3 [00:03<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  33%|███▎      | 1/3 [00:03<00:WARNING: NMS time limit 1.060s exceeded
+                 all         91         99     0.0863      0.333     0.0489    0.00916:  33%|███▎      | 1/3 [00:03<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/3 [00:00<?, WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:09<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:09<00:WARNING: NMS time limit 1.060s exceeded
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 3/3 [00:09<00:WARNING: NMS time limit 1.060s exceeded
