@@ -1,0 +1,40 @@
+{
+    "os": "Windows-10-10.0.22000-SP0",
+    "python": "3.10.4",
+    "heartbeatAt": "2022-05-06T13:06:16.491189",
+    "startedAt": "2022-05-06T13:06:13.998861",
+    "docker": null,
+    "gpu": "NVIDIA GeForce GTX 1650",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "--img",
+        "416",
+        "--batch",
+        "16",
+        "--epochs",
+        "10",
+        "--data",
+        "data.yaml",
+        "--cfg",
+        "./models/yolov5s_custom.yaml",
+        "--weights",
+        "yolov5s.pt",
+        "--name",
+        "yolov5s_results",
+        "--cache"
+    ],
+    "state": "running",
+    "program": "E:\\Projects\\yolov5\\train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/ultralytics/yolov5",
+        "commit": "aa7a0e91b175a9b2c64c3eca44dcafe77dc23d03"
+    },
+    "email": "ismailhossainpolash@gmail.com",
+    "root": "E:/Projects/yolov5",
+    "host": "win11",
+    "username": "ipola",
+    "executable": "C:\\Users\\ipola\\anaconda3\\envs\\yolov5\\python.exe"
+}
